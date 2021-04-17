@@ -1,0 +1,301 @@
+*, html, body {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*
+**  NAVBAR NAVBAR NAVBAR NAVBAR 
+**  NAVBAR NAVBAR NAVBAR NAVBAR  
+*/
+
+.navbar {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    grid-area: navbar;
+}
+
+.navbar .navlinks {
+    width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    margin: 0px 26px 12px 0px;
+}
+
+.navlinks a {
+    text-decoration: none;
+    font-size: 13px;
+    color: rgba(0,0,0,0.87);
+    align-self: center;
+}
+ 
+    .navlinks a:hover {
+        text-decoration: underline;
+    }
+
+.navbar .gmail {
+    margin-right: -17px;
+    margin-top: 12px;
+}
+
+.navbar .navlinks .images {
+    margin-left: -30px;
+    margin-top: 12px;
+}
+
+.navbar .navlinks .appsround {
+    
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    position: absolute;
+    right: 9%;
+    top: 1%;
+    border-radius: 50px;
+    margin: 0px -4px 0px 0px;
+    padding: 20px;
+    cursor: pointer;
+}   
+
+    .navlinks .appsround:hover {
+        background: #f1f1f1;
+    }
+
+.navbar .navlinks .appsround img {
+    filter: invert(37%) sepia(10%) saturate(277%) 
+    hue-rotate(173deg) brightness(96%) contrast(85%);
+    height: 24px;
+    width: 24px;
+    margin: -20px 0px 2px -15px;
+    position: relative;
+}
+
+.navlinks input {
+    width: 96px;
+    height: 36px;
+    color: #fff;
+    background: #1a73e8;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin: 0px 1px 0px 0px;
+    font-size: 14px;
+    box-sizing: border-box;
+    position: relative;
+    right: -9.7%;
+    cursor: pointer;   
+}
+
+    .navlinks input:hover {
+        background: #2b80f0;
+        box-shadow: 0px 0.5px 1px #3d85e4;
+    }
+
+/*
+**  MAIN MAIN MAIN MAIN MAIN MAIN
+**  MAIN MAIN MAIN MAIN MAIN MAIN 
+*/
+
+.main {
+    display: grid;
+    grid-template-columns: 410px auto 410px;
+    grid-template-rows: 300px 75px 70px 300px 200px;
+    grid-template-areas: ". logo ."
+                         ". searchboxdiv ."
+                         ". searchbtndiv ."
+                         ". googleoffereddiv .";
+    background: #fff;
+    width: 100%;
+    height: 84.5vh;
+    grid-area: main;
+}
+
+.main .logo img {
+    width: 272px;
+    height: 92px;
+    margin-bottom: 6px;
+}
+
+.main .logo {
+    grid-area: logo;
+    align-self: end;
+    justify-self: center;
+}
+
+.main .searchboxdiv {
+    display: flex;
+    grid-area: searchboxdiv;
+    align-items: center;
+    justify-content: center;
+    margin-top:  2px;
+}
+
+    .searchboxdiv .fakebox {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 584px;
+        height: 46px;
+        background-color: transparent;
+        border: 1px solid rgb(230, 227, 227);
+        border-radius: 24px;
+    }
+
+        .searchboxdiv .fakebox:hover {
+            box-shadow: 1px 1px 7px rgb(212, 212, 212);
+        }
+
+    .searchboxdiv .searchicon {
+        
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 30%;
+        margin-left: 11px;
+        margin-top: 12px;
+        filter: invert(78%) sepia(1%) saturate(1567%) hue-rotate(183deg) brightness(84%) contrast(80%);
+    }
+
+    .searchboxdiv .micicon {
+        
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 30%;
+        margin-right: 13px;
+        margin-top: 10px; 
+    }
+
+    .searchboxdiv input {
+        background-color: transparent;
+        width: 487px;
+        height: 46px;
+        border: none;
+    }
+        input:focus {
+            outline: none;
+        }
+
+.main .searchbtndiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: searchbtndiv;
+    margin-left: -2px;
+}
+
+    .searchbtndiv input {
+        margin: 0 7px;
+        background-color: #f8f9fa ;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        margin-bottom: 3px;
+        margin-right: 15px;
+        color: #3c4043;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+        .searchbtndiv input:hover {
+            border: 1px solid lightgrey;
+        }
+
+        .searchbtndiv input:focus {
+            border: 1px solid #2b7de9;
+        }
+
+        #leftbtn  {
+            width: 125px;
+            height: 34px;
+            margin-left: 20px;
+        }   
+
+        #rightbtn {
+            width: 141px; 
+            height: 34px;
+            margin-left: -1.5px;  
+        }
+
+.main .googleoffereddiv {
+    display: flex;
+    grid-area: googleoffereddiv;
+    justify-content: center;
+    font-size: 13px;
+}
+
+    .googleoffereddiv p, a  {
+        margin-top: 11px;
+    }
+
+        .googleoffereddiv a {
+            color: rgb(0, 0, 175);
+            text-decoration: none;
+            padding: 0 3px;
+        }
+
+        .googleoffereddiv a:hover {
+            text-decoration: underline;
+        }
+
+
+/*
+**  FOOTER FOOTER FOOTER FOOTER
+**  FOOTER FOOTER FOOTER FOOTER 
+*/ 
+
+.footer {
+    background:#f2f2f2;
+    height: 92px;
+    width: 100%;
+    grid-area: footer;
+    box-sizing: border-box;
+}
+
+.footer .footerbottom a:hover {
+    text-decoration: underline;
+}
+
+    .footer .footertop {
+        height: 46px;
+        width: 100%;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        border-bottom: 1px solid lightgrey;
+    }
+
+        .footertop p {
+            font-size: 15px;
+            color: #70757a;
+        }
+
+    .footer .footerbottom {
+        height: 46px;
+        width: 100%;
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 35px;
+        font-size: 14px;        
+    }
+
+        .footerbottom .leftfooter a {
+            margin-right: 26.5px;
+            color: #70757a;
+            text-decoration: none;
+        }
+
+    .footerbottom .rightfooter a {
+        text-decoration: none;
+        color: #707571;
+        margin-left: 26.5px;
+    }
